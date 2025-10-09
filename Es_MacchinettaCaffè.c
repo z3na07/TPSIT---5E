@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <unistd.h>
-int cambioCialde(INT countCialdeUsate){
+#include <stdbool.h>
+int cambioCialde(int countCialdeUsate){
 
     printf("Cialde finite, Riempimento in corso..");
     for(int i; i < 10; i ++){
@@ -8,7 +9,7 @@ int cambioCialde(INT countCialdeUsate){
         sleep(3);
     }
 
-    countCialdeUSate = 0;
+    countCialdeUsate = 0;
 
     return countCialdeUsate;
 }
@@ -116,3 +117,4 @@ int main(){
 
     return 0;
 }
+
