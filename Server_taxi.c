@@ -32,7 +32,7 @@ int main()
     };
     char stringa[20];
     char inizioTaxi[20] = "Taxi acquistato";
-    char fineTaxi[30] = "Serizio terminato!";
+    char fineTaxi[30] = "Servizio terminato!";
     int socketfd, soa, fromlen = sizeof(servizio);
 
     socketfd = socket(AF_INET, SOCK_STREAM, 0);
