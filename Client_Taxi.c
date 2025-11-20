@@ -9,7 +9,7 @@
 #include <unistd.h>
 #include <arpa/inet.h>
 
-#define PORT 1450
+#define PORT 6969
 
 int main() {
 
@@ -28,7 +28,7 @@ int main() {
     server_addr.sin_family = AF_INET;
     server_addr.sin_port = htons(PORT);
 
-    if (inet_pton(AF_INET, "127.0.0.1", &server_addr.sin_addr) <= 0) {
+    if (inet_pton(AF_INET, "192.168.60.177", &server_addr.sin_addr) <= 0) {
         perror("inet_pton error");
         exit(1);
     }
@@ -50,6 +50,10 @@ int main() {
     if(n > 0){
         Risposta[n] = '\0';
         printf("%s \n", Risposta);
+    }
+
+   if(strcmp(Risposta, "Servizio terminato!")==0){
+        return 1;
     }
 
 
