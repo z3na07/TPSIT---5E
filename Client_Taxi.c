@@ -15,6 +15,7 @@ int main() {
 
     int sockfd;
     char Str[1024];
+    char Risposta[1024];
     struct sockaddr_in server_addr = {0};
 
     while(1){
@@ -44,6 +45,13 @@ int main() {
     fgets(Str, sizeof(Str), stdin);
 
     send(sockfd, Str, strlen(Str), 0);
+
+    int n = read(sockfd, Risposta, sizeof(Risposta));
+    if(n > 0){
+        Risposta[n] = '\0';
+        printf("%s \n", Risposta);
+    }
+
 
     close(sockfd);
     }
