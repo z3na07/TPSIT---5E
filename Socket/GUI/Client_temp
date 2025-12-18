@@ -1,0 +1,18 @@
+import socket
+import tkinter as tk
+from tkinter import *
+
+
+root = tk.Tk(baseName = "Dati temperatura client", width = 200, height = 300)
+
+Label(root, text = "Temperatura 12:00").grid(row = 0)
+Label(root, text = "Teemperatura 24:00").grid(row = 1)
+
+e1 = Entry(root)
+e2 = Entry(root)
+
+e1.grid(row = 0, column = 1)
+e2.grid(row = 1, column = 1)
+
+
+
